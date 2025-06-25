@@ -1,7 +1,7 @@
 'use client';
 
 import { redirect } from 'next/navigation';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import { APP_ROUTES } from '@/constants/appRoutes';
 import MyProfile from './_components/my-profile/MyProfile';
 import MySocialList from './_components/my-social-list/MySocialList';

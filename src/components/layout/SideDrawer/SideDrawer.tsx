@@ -6,7 +6,7 @@ import { SideDrawerProps } from '@/components/layout/SideDrawer/type';
 import { usePathname, useRouter } from 'next/navigation';
 import { APP_ROUTES } from '@/constants/appRoutes';
 import { usePostSignout } from '@/hooks/api/auth/usePostSignout';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import useReferer from '@/hooks/useReferer';
 
 const SideDrawer = ({ isOpen, closeDrawer, menuItems }: SideDrawerProps) => {

@@ -1,4 +1,4 @@
-import { ToastMessageProps, ToastStatusType } from '@/types/toastType';
+import { ToastMessageProps, ToastStatusType } from '@/providers/toast/type';
 import {
   CircleX,
   CircleCheck,

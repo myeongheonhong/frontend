@@ -5,9 +5,9 @@ import '@/styles/globals.css';
 import QueryProviders from '@/providers/queryProviders';
 import { GNB } from '@/components/layout/GNB/GNB';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
-import AuthProvider from '@/providers/auth-provider/AuthProvider';
+import AuthProvider from '@/providers/auth/AuthProvider';
 import { ReactNode } from 'react';
-import { ToastProvider } from '@/providers/ToastProvider';
+import { ToastProvider } from '@/providers/toast/ToastProvider';
 
 const pretendard = localFont({
   src: '../fonts/PretendardVariable.woff2',

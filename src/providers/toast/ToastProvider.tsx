@@ -6,7 +6,7 @@ import {
   ToastData,
   ToastParams,
   ToastPositionType,
-} from '@/types/toastType';
+} from '@/providers/toast/type';
 import toast from '@/utils/toast';
 import React, {
   createContext,

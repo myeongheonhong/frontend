@@ -1,4 +1,4 @@
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import useBoolean from '@/hooks/useBoolean';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/common/Button/Button';

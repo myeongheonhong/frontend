@@ -1,4 +1,4 @@
-import { ToastCallableWithStatus, ToastParams } from '@/types/toastType';
+import { ToastCallableWithStatus, ToastParams } from '@/providers/toast/type';
 
 export const TOAST_STATUS = ['info', 'warning', 'error', 'success'] as const;
 

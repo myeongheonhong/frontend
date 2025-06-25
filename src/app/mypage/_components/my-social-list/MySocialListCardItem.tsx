@@ -7,7 +7,7 @@ import {
 import { MySocialListItemProps } from './type';
 import ListCard from '@/components/common/Card/ListCard';
 import useCollaboratorList from '@/hooks/api/mypage/useCollaboratorList';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import convertLocationToGenre from '@/utils/convertLocationToGenre';
 import { useRouter } from 'next/navigation';
 import getSocialActionMessage from '@/utils/getSocialActionMessage';

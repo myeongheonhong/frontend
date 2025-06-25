@@ -10,7 +10,7 @@ import { StoryWriteOrApproveModalProviders } from '@/providers/StoryWriteOrAppro
 import StoryModalTriggerButton from '@/app/library/detail/[id]/_components/StoryModalTriggerButton';
 import useGetUserRole from '@/hooks/api/supabase/story-collaborators/useGetUserRole';
 import ContentCover from './_components/ContentCover';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import { useGetStory } from '@/hooks/api/supabase/stories/useGetStory';
 import { useGetContent } from '@/hooks/api/supabase/contents/useGetContent';
 import { useSearchParams } from 'next/navigation';

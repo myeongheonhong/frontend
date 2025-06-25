@@ -1,4 +1,3 @@
-import { TextEditorRef } from '@/types/textEditor';
 import { useEffect, useRef, useState } from 'react';
 import { UseManageSummaryParams } from '@/app/social/detail/[storyId]/type';
 import validateEditorContent from '@/utils/validators/validateEditorContent';
@@ -7,7 +6,10 @@ import useSaveSummary from '@/hooks/api/supabase/story-collaborators/useSaveSumm
 const SUMMARY_MIN_LENGTH = 10;
 
 const useManageSummary = ({ storyId, storiesData }: UseManageSummaryParams) => {
-  const editorContentRef = useRef<TextEditorRef>(null);
+  const editorContentRef = useRef<{
+    getHTML: () => string;
+    getText: () => string;
+  }>(null);
   const [extractionHtml, setExtractionHtml] = useState('');
 
   const { mutate } = useSaveSummary({ storyId: storyId });

@@ -1,4 +1,4 @@
-import getMyInfoOnServer from '@/providers/auth-provider/getMyInfoOnServer';
+import getMyInfoOnServer from '@/providers/auth/getMyInfoOnServer';
 import SignupForm from './_components/SignupForm';
 import LinkToSignIn from './_components/LinkToSignIn';
 import { redirect } from 'next/navigation';

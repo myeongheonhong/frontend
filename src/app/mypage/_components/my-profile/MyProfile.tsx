@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import useBoolean from '@/hooks/useBoolean';
 import { BtnEditLarge, DefaultProfileImage } from '@public/assets/icons';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import EditMyProfileForm from './EditMyProfileForm';
 import MyProfileSkeleton from './MyProfileSkeleton';
 

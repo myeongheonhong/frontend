@@ -8,7 +8,7 @@ import useClickOutside from '@/hooks/useClickOutside';
 import { usePostSignout } from '@/hooks/api/auth/usePostSignout';
 import UserDropdown from '@/components/layout/GNB/UserDropdown';
 import Link from 'next/link';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 import useReferer from '@/hooks/useReferer';
 
 const LoginSection = () => {

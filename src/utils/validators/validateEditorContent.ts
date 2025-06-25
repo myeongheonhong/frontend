@@ -1,8 +1,10 @@
-import { TextEditorRef } from '@/types/textEditor';
 import { RefObject } from 'react';
 
 type ValidateEditorContentParams = {
-  ref: RefObject<TextEditorRef | null>;
+  ref: RefObject<{
+    getHTML: () => string;
+    getText: () => string;
+  } | null>;
   minLength?: number;
   alertMessage?: string;
 };

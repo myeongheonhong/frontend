@@ -18,7 +18,7 @@ import {
   FORM_DELAY_ERROR,
   WORD_LIMIT_OPTIONS,
 } from '@/constants/social/createSocialForm';
-import { useAuth } from '@/providers/auth-provider/AuthProvider.client';
+import { useAuth } from '@/providers/auth/AuthProvider.client';
 
 interface SocialResponse {
   id: number;

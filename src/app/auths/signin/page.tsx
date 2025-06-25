@@ -1,5 +1,5 @@
 import SignInForm from './_components/SignInForm';
-import getMyInfoOnServer from '@/providers/auth-provider/getMyInfoOnServer';
+import getMyInfoOnServer from '@/providers/auth/getMyInfoOnServer';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import LinkToSignUp from './_components/LinkToSignUp';

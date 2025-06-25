@@ -5,7 +5,6 @@ import { CreateContentModalProps } from '@/app/library/detail/[id]/type';
 import { useRef, FormEvent } from 'react';
 import usePostContent from '@/hooks/api/supabase/stories/usePostContent';
 import { useStoryModal } from '@/providers/StoryWriteOrApproveModalProviders';
-import { TextEditorRef } from '@/types/textEditor';
 import validateEditorContent from '@/utils/validators/validateEditorContent';
 
 const CONTENT_MIN_LENGTH = 20;
@@ -16,7 +15,10 @@ const CreateContentModal = ({
   lastContentData,
   maxContentLength,
 }: CreateContentModalProps) => {
-  const editorContentRef = useRef<TextEditorRef>(null);
+  const editorContentRef = useRef<{
+    getHTML: () => string;
+    getText: () => string;
+  }>(null);
   const { isOpen, closeModal } = useStoryModal();
   const { mutate } = usePostContent({ storyId: currentStoryId });
   const temporaryContent =
