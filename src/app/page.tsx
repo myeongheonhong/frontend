@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation';
 const Home = () => {
-  redirect('/social');
-  return <></>;
+  return <h1 className="text-write-pink">hello</h1>;
 };
 
 export default Home;

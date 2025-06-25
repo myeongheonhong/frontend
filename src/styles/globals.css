@@ -20,6 +20,7 @@
   --color-write-error: #dc2626;
   --color-write-sub-title: #52b995;
   --color-write-info: #a3e1f3;
+  --color-write-pink: #ff6b81;
 }
 
 @layer utilities {

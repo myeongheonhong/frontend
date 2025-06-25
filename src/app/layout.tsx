@@ -2,12 +2,9 @@ import localFont from 'next/font/local';
 import { Hanuman } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
-import QueryProviders from '@/providers/queryProviders';
-import { GNB } from '@/components/layout/GNB/GNB';
-import LayoutWrapper from '@/components/layout/LayoutWrapper';
+import QueryProviders from '@/providers/react-query/queryProviders';
 import AuthProvider from '@/providers/auth/AuthProvider';
 import { ReactNode } from 'react';
-import { ToastProvider } from '@/providers/toast/ToastProvider';
 
 const pretendard = localFont({
   src: '../fonts/PretendardVariable.woff2',
@@ -42,19 +39,13 @@ const RootLayout = ({
       <body
         className={`flex min-h-screen flex-col ${pretendard.variable} ${hanuman.variable} antialiased`}
       >
-        <ToastProvider>
-          <QueryProviders>
-            <AuthProvider>
-              <header>
-                <GNB />
-              </header>
+        <QueryProviders>
+          <AuthProvider>
+            <header></header>
 
-              <main>
-                <LayoutWrapper>{children}</LayoutWrapper>
-              </main>
-            </AuthProvider>
-          </QueryProviders>
-        </ToastProvider>
+            <main>{children}</main>
+          </AuthProvider>
+        </QueryProviders>
       </body>
     </html>
   );

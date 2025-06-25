@@ -1,9 +1,7 @@
 import { getCookie } from '@/api/cookies';
-import { MyInfoResponse } from '@/api/auth/type';
 import { getQueryClient } from '@/lib/queryClinet';
 import { QUERY_KEY } from '@/constants/queryKey';
 import { AuthProviderServerState } from './type';
-import { getMyInfo } from '@/api/auth/api';
 import handleError from '@/utils/error';
 
 const getMyInfoOnServer = async () => {
@@ -22,9 +20,9 @@ const getMyInfoOnServer = async () => {
   }
 
   try {
-    const data = await queryClient.fetchQuery<MyInfoResponse>({
+    const data = await queryClient.fetchQuery({
       queryKey: [QUERY_KEY.MY_INFO],
-      queryFn: () => getMyInfo(accessToken),
+      queryFn: () => {}, //TODO: 로그인 기능 구현 후 대체 예정
     });
     return {
       ...initialState,
