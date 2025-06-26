@@ -1,4 +1,7 @@
-import { SupabaseResponse } from './type';
+interface SupabaseResponse<T> {
+  data: T | null;
+  error: Error | null;
+}
 
 const throwOnSupabaseError = async <T>(
   operation: () => Promise<SupabaseResponse<T>>
