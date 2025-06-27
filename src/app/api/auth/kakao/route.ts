@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'kakao',
       options: {
-        redirectTo: `${req.nextUrl.origin}/auth/callback`,
+        redirectTo: `${req.nextUrl.origin}/api/auth/callback`,
         queryParams: {},
       },
     });
