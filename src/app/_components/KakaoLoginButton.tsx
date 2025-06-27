@@ -7,7 +7,7 @@ const KakaoLoginButton = () => {
   const handleKakaoLogin = async () => {
     try {
       // 카카오 로그인 API 호출
-      const response = await fetch('/auth/kakao', {
+      const response = await fetch('/api/auth/kakao', {
         method: 'POST',
       });
 

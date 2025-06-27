@@ -3,7 +3,6 @@ import { Hanuman } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 import QueryProviders from '@/providers/react-query/queryProviders';
-import AuthProvider from '@/providers/auth/AuthProvider';
 import { ReactNode } from 'react';
 import { Toaster } from 'sonner';
 
@@ -41,12 +40,10 @@ const RootLayout = ({
         className={`flex min-h-screen flex-col ${pretendard.variable} ${hanuman.variable} antialiased`}
       >
         <QueryProviders>
-          <AuthProvider>
-            <Toaster />
-            <header></header>
+          <Toaster />
+          <header></header>
 
-            <main>{children}</main>
-          </AuthProvider>
+          <main>{children}</main>
         </QueryProviders>
       </body>
     </html>
