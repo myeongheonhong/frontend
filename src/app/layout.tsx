@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 import QueryProviders from '@/providers/react-query/queryProviders';
 import AuthProvider from '@/providers/auth/AuthProvider';
 import { ReactNode } from 'react';
+import { Toaster } from 'sonner';
 
 const pretendard = localFont({
   src: '../fonts/PretendardVariable.woff2',
@@ -41,6 +42,7 @@ const RootLayout = ({
       >
         <QueryProviders>
           <AuthProvider>
+            <Toaster />
             <header></header>
 
             <main>{children}</main>
